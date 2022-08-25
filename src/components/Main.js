@@ -20,7 +20,7 @@ const Container=styled.div`
   display: flex;
   flex-direction: column;
   width: 570px;
-  height: 835px;
+  height: 850px;
   border-radius: 16px;
   overflow: hidden;
 `

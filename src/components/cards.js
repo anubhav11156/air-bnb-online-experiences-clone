@@ -1,13 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Cards() {
+function Cards(props) {
+  const backgroundImg=`/images/${props.backgroundImg}`;
+  const starRating=props.starRating;
+  const country=props.country;
+  const description=props.description;
+  const maxRating=props.maxRating;
+  const price=props.price;
+  const buyStatus=props.buyStatus;
     return (
         <Container>
           <PofilePicture>
-            <img src="images/katie.png"/>
+            <img src={backgroundImg}/>
               <BuyStatus>
-                <p>SOLD OUT</p>
+                <p>{buyStatus}</p>
               </BuyStatus>
           </PofilePicture>
 
@@ -20,18 +27,16 @@ function Cards() {
                 <img src="images/Star.png"/>
               </div>
               <div className="rating-div">
-                <p className="rating">5.0</p>
-                <p className="number">(6) </p>
-                <p className="country"> &#8226; USA</p>
+                <p className="rating">{starRating}</p>
+                <p className="number">({maxRating}) </p>
+                <p className="country"> &#8226; {country}</p>
               </div>
             </Rating>
             <Title>
-              <p>
-                Life Lesson with Katie Zaferes
-              </p>
+              <p>{description}</p>
             </Title>
             <Price>
-              <p><span>From $136</span> / person</p>
+              <p><span>From ${price}</span> / person</p>
             </Price>
           </Description>
         </Container>
@@ -49,12 +54,13 @@ const Container=styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `
 
 const PofilePicture=styled.div`
   position:relative;
   z-index: 10;
-  width: 172px;
+  width: 177px;
   height: 225px;
   background-color: grey;
   border-radius: 10px;
@@ -63,20 +69,20 @@ const PofilePicture=styled.div`
 
   img {
     position: relative;
-    width: 172px;
+    width: 177px;
     object-fit: cover;
   }
 `
 
 const Void=styled.div`
-  width: 172px;
+  width: 177px;
   height: 18px;
 `
 
 const Description=styled.div`
   position:relative;
   bottom:9px;
-  width: 172px;
+  width: 177px;
   flex:1;
   background-color:White;
   display:flex;
