@@ -43,6 +43,7 @@ const Header=styled.div`
   img {
     margin-left: 30px;
     width: 95px;
+    cursor: pointer;
   }
 
 `

@@ -16,11 +16,11 @@ export default Main
 
 const Container=styled.div`
   position: relative;
-  top: 100px;
+  top: 60px;
   display: flex;
   flex-direction: column;
-  width: 560px;
-  height: 790px;
+  width: 570px;
+  height: 835px;
   border-radius: 16px;
   overflow: hidden;
 `
